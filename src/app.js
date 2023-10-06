@@ -3,6 +3,8 @@ const hbs = require('hbs')
 const path = require('path');
 const app = express();
 
+const port = process.env.PORT || 3000
+
 //requiring 
 const request = require('postman-request')
 const forcast = require('./utils/forcast')
@@ -101,6 +103,6 @@ app.get('*' , (req ,res) =>{
 })
 
 
-app.listen('3000' , ()=> {
-    console.log("server on port 3000");
+app.listen( port , ()=> {
+    console.log("server on port "+ port);
 })

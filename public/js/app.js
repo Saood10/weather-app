@@ -7,7 +7,7 @@ document.querySelector('form').addEventListener('submit' , (e)=>{
 
     const loc = document.querySelector('input').value
 
-    fetch('http://localhost:3000/weather?address='+loc).then((res)=>{
+    fetch('/weather?address='+loc).then((res)=>{
 
     res.json().then((data)=>{
 
